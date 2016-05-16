@@ -1,16 +1,16 @@
 {
 	"bicicletarias" : [{
 			"nome" : "LOREM IPSUM DOLOR",
-			"lat" : 52.415524,
-			"lng" : -4.063066
+			"lat" : -23.7100986,
+			"lng" : -46.5629344
 		}, {
 			"nome" : "LOREM IPSUM DOLOR",
 			"lat" : -23.6815315,
 			"lng" : -46.8754817
 		}, {
 			"nome" : "LOREM IPSUM DOLOR",
-			"lat" : 52.415524,
-			"lng" : -4.063066
+			"lat" : -23.6248442,
+			"lng" : -46.5824175
 		}
 	]
 }
