@@ -64,11 +64,10 @@ function setMarkers(center, radius, map) {
                     title: data.nome
                 });
                 infoBox(map, marker, data);
+                circle.bindTo('center', marker, 'position');
             }
         }
     }
-
-    circle.bindTo('center', marker, 'position');
 }
 
 function infoBox(map, marker, data) {
