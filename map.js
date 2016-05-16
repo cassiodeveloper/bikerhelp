@@ -87,4 +87,4 @@ function infoBox(map, marker, data) {
     })(marker, data);
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'load', initMap);
