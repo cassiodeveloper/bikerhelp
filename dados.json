@@ -1,25 +1,18 @@
 {
-   "bicicletarias" : [
-    [
-        "nome": "LOREM IPSUM DOLOR",
-        "site": "www.remipsumdolor.com.br",
-        "telefone": "+55 (11) 6454-2131",
-        "lat": 52.415524,
-        "lng": -4.063066
-    ],
-    [
-        "nome": "LOREM IPSUM DOLOR",
-        "site": "www.remipsumdolor.com.br",
-        "telefone": "+55 (11) 6454-2131",
-        "lat": -23.6815315,
-        "lng": -46.8754817
-    ],
-    [
-        "nome": "LOREM IPSUM DOLOR",
-        "site": "www.remipsumdolor.com.br",
-        "telefone": "+55 (11) 6454-2131",
-        "lat": 52.415524,
-        "lng": -4.063066
-    ],
-  ]
+	"bicicletarias" : [
+		[
+			"nome" : "LOREM IPSUM DOLOR",
+			"lat" : 52.415524,
+			"lng" : -4.063066
+		],
+		[
+			"nome" : "LOREM IPSUM DOLOR",
+			"lat" : -23.6815315,
+			"lng" : -46.8754817
+		],
+		[
+			"nome" : "LOREM IPSUM DOLOR",
+			"lat" : 52.415524,
+			"lng" : -4.063066
+		]
 }
