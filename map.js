@@ -29,6 +29,7 @@ function setMarkers(center, radius, map) {
             'dataType': "json", 
             'success': function (data) {
                     json = data; 
+                    bindJson(json);
                 }
         });
         return json;
@@ -47,21 +48,23 @@ function setMarkers(center, radius, map) {
         });
     var bounds = circle.getBounds();
 
-    //loop between each of the json elements
-    for (var i = 0, length = json.length; i < length; i++) {
-        var data = json[i],
-        latLng = new google.maps.LatLng(data.lat, data.lng); 
+    function bindJson(json) {
+        //loop between each of the json elements
+        for (var i = 0, length = json.length; i < length; i++) {
+            var data = json[i],
+            latLng = new google.maps.LatLng(data.lat, data.lng); 
 
 
 
-        if(bounds.contains(latLng)) {
-            // Creating a marker and putting it on the map
-            var marker = new google.maps.Marker({
-                position: latLng,
-                map: map,
-                title: data.nome
-            });
-            infoBox(map, marker, data);
+            if(bounds.contains(latLng)) {
+                // Creating a marker and putting it on the map
+                var marker = new google.maps.Marker({
+                    position: latLng,
+                    map: map,
+                    title: data.nome
+                });
+                infoBox(map, marker, data);
+            }
         }
     }
 
