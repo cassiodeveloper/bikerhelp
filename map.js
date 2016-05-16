@@ -7,14 +7,12 @@ function initMap() {
         center = new google.maps.LatLng(latitude,longitude),
         mapOptions = {
             center: center,
-            zoom: 9,
-            mapTypeId: google.maps.MapTypeId.ROADMAP,
-            scrollwheel: true
+            zoom: 9
         };
     
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
     
-    setMarkers();
+    //setMarkers();
 }
 
 function setMarkers() {
