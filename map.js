@@ -24,6 +24,7 @@ function setMarkers() {
                 map: map,
                 title: data.nome
             });
+            marker.setMap(map);
         });
     });    
 };
