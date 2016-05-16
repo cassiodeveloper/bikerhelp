@@ -12,10 +12,10 @@ function initMap() {
     
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
     
-    setMarkers();
+    setMarkers(map);
 }
 
-function setMarkers() {
+function setMarkers(map) {
     $.getJSON("dados.json", function(json) {
         $.each(json.bicicletarias, function(key, data) {
             var latLng = new google.maps.LatLng(data.lat, data.lng); 
@@ -24,7 +24,6 @@ function setMarkers() {
                 map: map,
                 title: data.nome
             });
-            marker.setMap(map);
         });
     });    
 };
