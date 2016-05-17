@@ -24,6 +24,9 @@ function initMap() {
     
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
     
+    var bikeLayer = new google.maps.BicyclingLayer();
+    bikeLayer.setMap(map);
+    
     getBrowserLocation(map);    
     
     setMarkers(map);
