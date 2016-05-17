@@ -5,7 +5,7 @@ function initMap() {
     var center = new google.maps.LatLng(-23.6815315, -46.8754817),
         mapOptions = {
             center: center,
-            zoom: 13,
+            zoom: 14,
             zoomControl: true,
             scaleControl: true,
             streetViewControl: true,
@@ -15,7 +15,9 @@ function initMap() {
                 style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
                 mapTypeIds: [
                     google.maps.MapTypeId.ROADMAP,
-                    google.maps.MapTypeId.TERRAIN
+                    google.maps.MapTypeId.TERRAIN,
+                    google.maps.MapTypeId.SATELLITE,
+                    google.maps.MapTypeId.HYBRID 
                 ]
             }           
         };
