@@ -33,19 +33,33 @@ function setMarkers(map) {
 };
 
 function getBrowserLocation(infoWindow, map){
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
+    
+    var loc = {};
+    var geocoder = new google.maps.Geocoder();
+    if(google.loader.ClientLocation) {
+        loc.lat = google.loader.ClientLocation.latitude;
+        loc.lng = google.loader.ClientLocation.longitude;
+
+        var latlng = new google.maps.LatLng(loc.lat, loc.lng);
+        geocoder.geocode({'latLng': latlng}, function(results, status) {
+            if(status == google.maps.GeocoderStatus.OK) {
+                alert(results[0]['formatted_address']);
             };
-            map.setCenter(pos);
-        }, function() {
-                handleLocationError(true, infoWindow, map.getCenter());
-            });
-    } else {
-        handleLocationError(false, infoWindow, map.getCenter());
-    }
+        });
+    }    
+    // if (navigator.geolocation) {
+    //     navigator.geolocation.getCurrentPosition(function(position) {
+    //         var pos = {
+    //             lat: position.coords.latitude,
+    //             lng: position.coords.longitude
+    //         };
+    //         map.setCenter(pos);
+    //     }, function() {
+    //             handleLocationError(true, infoWindow, map.getCenter());
+    //         });
+    // } else {
+    //     handleLocationError(false, infoWindow, map.getCenter());
+    // }
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
